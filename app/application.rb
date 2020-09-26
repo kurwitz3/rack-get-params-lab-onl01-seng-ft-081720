@@ -24,8 +24,10 @@ class Application
     elsif req.path.match(/cart/) && @@cart.size == 0 
         resp.write  "Your cart is empty"
         
-        elsif req.path.match(/add/)
-        product = 
+    elsif req.path.match(/add/)
+        products = req.params["item"]
+        @@items.each do |t|
+          
     else
       resp.write "Path Not Found"
     end
