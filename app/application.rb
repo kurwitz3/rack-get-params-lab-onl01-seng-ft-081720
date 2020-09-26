@@ -20,7 +20,7 @@ class Application
          resp.write"#{product}\n"
        end 
        elsif req.path.match(/cart/) && @@cart.size == 0 
-        resp.write  
+        resp.write  "Your cart is empty"
     else
       resp.write "Path Not Found"
     end
