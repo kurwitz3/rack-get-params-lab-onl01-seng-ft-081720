@@ -29,7 +29,7 @@ class Application
         if @@items.include?(products)
           @@cart << products 
         else 
-          resp.write 
+          resp.write "We don't have that item"
         end   
     else
       resp.write "Path Not Found"
